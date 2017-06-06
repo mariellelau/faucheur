@@ -1,0 +1,21 @@
+BDDMBundle\Entity\Association:
+    type: entity
+    table: null
+    repositoryClass: BDDMBundle\Repository\AssociationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        cp:
+            type: integer
+            nullable: true
+        type:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

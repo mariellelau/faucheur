@@ -1,0 +1,2 @@
+bddm:
+    resource: '@BDDMBundle/Resources/config/routing.yml'

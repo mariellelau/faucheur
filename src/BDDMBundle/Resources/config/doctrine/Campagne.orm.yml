@@ -1,0 +1,18 @@
+BDDMBundle\Entity\Campagne:
+    type: entity
+    table: null
+    repositoryClass: BDDMBundle\Repository\CampagneRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        periode:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

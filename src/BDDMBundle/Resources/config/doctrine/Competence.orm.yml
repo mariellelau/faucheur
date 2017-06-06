@@ -1,0 +1,19 @@
+BDDMBundle\Entity\Competence:
+    type: entity
+    table: null
+    repositoryClass: BDDMBundle\Repository\CompetenceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            unique: true
+        detail:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family:Arial;
+    background-color: #E4E5E4;
+}
+
+.container {
+    background-color: white;
+    width:95%;
+    height:95%;
+    margin-left:2%;
+    margin-top:-5%;
+    margin-bottom:5%;
+}
+.center {
+    text-align: center;
+}
+
+.large {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.btn {
+    background-color: #E9BE3B;
+}
+
+.btn:hover {
+    background-color: #690F0F;
+}
