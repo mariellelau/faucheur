@@ -1,0 +1,23 @@
+FaucheurBundle\Entity\Aptitude:
+    type: entity
+    table: aptitude
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        niveau:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }
+#    oneToOne:
+#        militant:
+#            targetEntity: FaucheurBundle\Entity\Militant
+#            mappedBy: aptitude
+#        competence:
+#            targetEntity: FaucheurBundle\Entity\Competence
+#            mappedBy: aptitude

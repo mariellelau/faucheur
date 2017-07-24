@@ -1,0 +1,27 @@
+FaucheurBundle\Entity\Competence:
+    type: entity
+    table: competence
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+        detail:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
+#    oneToOne:
+#        aptitude:
+#            targetEntity: FaucheurBundle\Entity\Aptitude
+#            inversedBy: competence

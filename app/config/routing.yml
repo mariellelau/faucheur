@@ -1,2 +1,2 @@
-bddm:
-    resource: '@BDDMBundle/Resources/config/routing.yml'
+faucheur:
+    resource: '@FaucheurBundle/Resources/config/routing.yml'

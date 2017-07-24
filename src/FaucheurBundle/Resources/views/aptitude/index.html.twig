@@ -1,0 +1,41 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des aptitudes</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Id compétence</th>
+                <th>Niveau</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for aptitude in aptitudes %}
+            <tr>
+                <td><a href="{{ path('aptitude_show', { 'id': aptitude.id }) }}">{{ aptitude.id }}</a></td>
+                <td>{{ aptitude.idCompetence }}</td>
+                <td>{{ aptitude.niveau }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('aptitude_show', { 'id': aptitude.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('aptitude_edit', { 'id': aptitude.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('aptitude_new') }}">Ajouter une aptitude</a>
+        </li>
+    </ul>
+{% endblock %}

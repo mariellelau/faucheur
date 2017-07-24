@@ -1,0 +1,94 @@
+FaucheurBundle\Entity\Militant:
+    type: entity
+    table: militant
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        prenom:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: email_militant
+        telephone:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        adresse:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+        ville:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        codePostal:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        facebook:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        twitter:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        notes:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
+#    oneToMany:
+#        proximite:
+#            targetEntity: FaucheurBundle\Entity\Proximite
+#            mappedBy: idProximite
+#    manyToMany:
+#        actions:
+#            targetEntity: FaucheurBundle\Entity\Action
+#            joinTable:
+#                name: actions_militants
+#                joinColumns:
+#                    action_id:
+#                        referencedColumnName: id
+#                inverseJoinColumns:
+#                    militant_id:
+#                        referencedColumnName: id
+#        aptitudes:
+#            targetEntity: FaucheurBundle\Entity\Aptitude
+#        formations:
+#            targetEntity: FaucheurBundle\Entity\Formation

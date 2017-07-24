@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Militant</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Idmilitant</th>
+                <td>{{ militant.idMilitant }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ militant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ militant.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Emailmilitant</th>
+                <td>{{ militant.emailMilitant }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ militant.tel }}</td>
+            </tr>
+            <tr>
+                <th>Idproximite</th>
+                <td>{{ militant.idProximite }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ militant.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ militant.ville }}</td>
+            </tr>
+            <tr>
+                <th>Codepostal</th>
+                <td>{{ militant.codepostal }}</td>
+            </tr>
+            <tr>
+                <th>Facebook</th>
+                <td>{{ militant.facebook }}</td>
+            </tr>
+            <tr>
+                <th>Twitter</th>
+                <td>{{ militant.twitter }}</td>
+            </tr>
+            <tr>
+                <th>Notes</th>
+                <td>{{ militant.notes }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('militant_index') }}">Liste des militants</a>
+        </li>
+        <li>
+            <a href="{{ path('militant_edit', { 'idMilitant': militant.idMilitant }) }}">Modifier</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

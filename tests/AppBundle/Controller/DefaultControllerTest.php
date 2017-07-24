@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\BDDMBundle\Controller;
+namespace Tests\FaucheurBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

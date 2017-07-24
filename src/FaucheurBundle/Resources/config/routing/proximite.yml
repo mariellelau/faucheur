@@ -1,0 +1,24 @@
+proximite_index:
+    path:     /
+    defaults: { _controller: "FaucheurBundle:Proximite:index" }
+    methods:  GET
+
+proximite_show:
+    path:     /{id}/show
+    defaults: { _controller: "FaucheurBundle:Proximite:show" }
+    methods:  GET
+
+proximite_new:
+    path:     /new
+    defaults: { _controller: "FaucheurBundle:Proximite:new" }
+    methods:  [GET, POST]
+
+proximite_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FaucheurBundle:Proximite:edit" }
+    methods:  [GET, POST]
+
+proximite_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FaucheurBundle:Proximite:delete" }
+    methods:  DELETE

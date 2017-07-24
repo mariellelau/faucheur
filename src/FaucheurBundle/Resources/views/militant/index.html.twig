@@ -1,0 +1,59 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <h1>Militants list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idmilitant</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Emailmilitant</th>
+                <th>Tel</th>
+                <th>Idproximite</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Codepostal</th>
+                <th>Facebook</th>
+                <th>Twitter</th>
+                <th>Notes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for militant in militants %}
+            <tr>
+                <td><a href="{{ path('militant_show', { 'idMilitant': militant.idMilitant }) }}">{{ militant.idMilitant }}</a></td>
+                <td>{{ militant.nom }}</td>
+                <td>{{ militant.prenom }}</td>
+                <td>{{ militant.emailMilitant }}</td>
+                <td>{{ militant.tel }}</td>
+                <td>{{ militant.idProximite }}</td>
+                <td>{{ militant.adresse }}</td>
+                <td>{{ militant.ville }}</td>
+                <td>{{ militant.codepostal }}</td>
+                <td>{{ militant.facebook }}</td>
+                <td>{{ militant.twitter }}</td>
+                <td>{{ militant.notes }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('militant_show', { 'idMilitant': militant.idMilitant }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('militant_edit', { 'idMilitant': militant.idMilitant }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('militant_new') }}">Create a new militant</a>
+        </li>
+    </ul>
+{% endblock %}

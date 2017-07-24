@@ -1,0 +1,18 @@
+FaucheurBundle\Entity\Campagne:
+    type: entity
+    table: campagne
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+#    oneToMany:
+#        actions:
+#            targetEntity: FaucheurBundle\Entity\Action
+#            mappedBy: id

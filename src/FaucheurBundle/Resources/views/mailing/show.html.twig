@@ -1,0 +1,32 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <h1>Mailing</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ mailing.id }}</td>
+            </tr>
+            <tr>
+                <th>Idproximite</th>
+                <td>{{ mailing.idProximite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('mailing_index') }}">Liste des mailings</a>
+        </li>
+        <li>
+            <a href="{{ path('mailing_edit', { 'id': mailing.id }) }}">Modifier</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,29 @@
+FaucheurBundle\Entity\Association:
+    type: entity
+    table: association
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+            column: nom_association
+        codePostal:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        type:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

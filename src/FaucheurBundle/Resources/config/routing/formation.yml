@@ -1,0 +1,24 @@
+formation_index:
+    path:     /
+    defaults: { _controller: "FaucheurBundle:Formation:index" }
+    methods:  GET
+
+formation_show:
+    path:     /{id}/show
+    defaults: { _controller: "FaucheurBundle:Formation:show" }
+    methods:  GET
+
+formation_new:
+    path:     /new
+    defaults: { _controller: "FaucheurBundle:Formation:new" }
+    methods:  [GET, POST]
+
+formation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FaucheurBundle:Formation:edit" }
+    methods:  [GET, POST]
+
+formation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FaucheurBundle:Formation:delete" }
+    methods:  DELETE

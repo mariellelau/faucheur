@@ -1,0 +1,41 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des compétences</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom de la compétence</th>
+                <th>Detail de la compétence</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for competence in competences %}
+            <tr>
+                <td><a href="{{ path('competence_show', { 'id': competence.id }) }}">{{ competence.id }}</a></td>
+                <td>{{ competence.nom }}</td>
+                <td>{{ competence.detail }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('competence_show', { 'id': competence.id }) }}">voir</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('competence_edit', { 'id': competence.id }) }}">modifier</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('competence_new') }}">Ajouter une compétence</a>
+        </li>
+    </ul>
+{% endblock %}

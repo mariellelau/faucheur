@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Proximites list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomproximite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for proximite in proximites %}
+            <tr>
+                <td><a href="{{ path('proximite_show', { 'id': proximite.id }) }}">{{ proximite.id }}</a></td>
+                <td>{{ proximite.nomProximite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('proximite_show', { 'id': proximite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('proximite_edit', { 'id': proximite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('proximite_new') }}">Create a new proximite</a>
+        </li>
+    </ul>
+{% endblock %}

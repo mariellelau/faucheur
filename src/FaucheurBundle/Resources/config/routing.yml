@@ -1,0 +1,37 @@
+faucheur_homepage:
+    path:     /
+    defaults: { _controller: FaucheurBundle:Views:index }
+faucheur_rechercher:
+    path:     /rechercher
+    defaults: { _controller: FaucheurBundle:Views:rechercher }
+faucheur_ajouter:
+    path:     /ajouter
+    defaults: { _controller: FaucheurBundle:Views:ajouter }
+
+faucheur_action:
+    resource: "@FaucheurBundle/Resources/config/routing/action.yml"
+    prefix:   /action
+faucheur_aptitude:
+    resource: "@FaucheurBundle/Resources/config/routing/aptitude.yml"
+    prefix:   /aptitude
+faucheur_association:
+    resource: "@FaucheurBundle/Resources/config/routing/association.yml"
+    prefix:   /association
+faucheur_competence:
+    resource: "@FaucheurBundle/Resources/config/routing/competence.yml"
+    prefix:   /competence
+faucheur_formation:
+    resource: "@FaucheurBundle/Resources/config/routing/formation.yml"
+    prefix:   /formation
+faucheur_mailing:
+    resource: "@FaucheurBundle/Resources/config/routing/mailing.yml"
+    prefix:   /mailing
+faucheur_militant:
+    resource: "@FaucheurBundle/Resources/config/routing/militant.yml"
+    prefix:   /militant
+faucheur_proximite:
+    resource: "@FaucheurBundle/Resources/config/routing/proximite.yml"
+    prefix:   /proximite
+
+
+

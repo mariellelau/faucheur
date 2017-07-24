@@ -1,0 +1,29 @@
+FaucheurBundle\Entity\Mailing:
+    type: entity
+    table: mailing
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            nullable: false
+#    oneToOne:
+#        email:
+#            targetEntity: Militant
+#            cascade: {  }
+#            fetch: LAZY
+#            mappedBy: null
+#            inversedBy: null
+#            joinColumns:
+#                email_militant:
+#                    referencedColumnName: email
+#            orphanRemoval: false
+#        proximite:
+#            targetEntity: FaucheurBundle\Entity\Proximite
+#            inversedBy: mailing
+    lifecycleCallbacks: {  }

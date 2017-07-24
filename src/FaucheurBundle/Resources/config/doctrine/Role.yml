@@ -1,0 +1,22 @@
+FaucheurBundle\Entity\Role:
+    type: entity
+    table: role_action
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomRole:
+            type: string
+            nullable: true
+            length: 150
+            options:
+                fixed: false
+            column: nom_role
+#    oneToOne:
+#        idRole:
+#            targetEntity: Action
+#            mappedBy: id
+    lifecycleCallbacks: {  }

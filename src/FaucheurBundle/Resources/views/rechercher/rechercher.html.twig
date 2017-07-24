@@ -1,0 +1,34 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <div class="row center large">
+        <div class="col s12">
+            <h2>Je recherche des infos</h2>
+        </div>
+    </div>
+    <div class="row center large">
+        <div class="col offset-s4 s4">
+            <a class="waves-effect waves-light btn" href="{{ path('militant_index') }}">Sur un militant</a>
+        </div>
+    </div>
+    <div class="row center large">
+        <div class="offset-s2 col s4">
+            <a class="waves-effect waves-light btn" href="{{ path('competence_index') }}">Par compétences</a>
+        </div>
+        <div class="col s4">
+            <a class="waves-effect waves-light btn" href="{{ path('association_index') }}">Sur un groupe local</a>
+        </div>
+    </div>
+
+    <div class="row center large">
+        <div class="col s4">
+            <a class="waves-effect waves-light btn" href="{{ path('militant_index') }}">Sur une campange</a>
+        </div>
+        <div class="col s4">
+            <a class="waves-effect waves-light btn" href="{{ path('action_index') }}">Sur une action</a>
+        </div>
+        <div class="col s4">
+            <a class="waves-effect waves-light btn" href="{{ path('formation_index') }}">Sur une formation</a>
+        </div>
+    </div>
+{% endblock body %}

@@ -1,0 +1,24 @@
+competence_index:
+    path:     /
+    defaults: { _controller: "FaucheurBundle:Competence:index" }
+    methods:  GET
+
+competence_show:
+    path:     /{id}/show
+    defaults: { _controller: "FaucheurBundle:Competence:show" }
+    methods:  GET
+
+competence_new:
+    path:     /new
+    defaults: { _controller: "FaucheurBundle:Competence:new" }
+    methods:  [GET, POST]
+
+competence_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FaucheurBundle:Competence:edit" }
+    methods:  [GET, POST]
+
+competence_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FaucheurBundle:Competence:delete" }
+    methods:  DELETE

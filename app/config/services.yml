@@ -1,5 +1,3 @@
-# Learn more about services, parameters and containers at
-# http://symfony.com/doc/current/service_container.html
 parameters:
     #parameter_name: value
 
@@ -16,16 +14,16 @@ services:
 
     # makes classes in src/AppBundle available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
-    BDDMBundle\:
-        resource: '../../src/BDDMBundle/*'
+    FaucheurBundle\:
+        resource: '../../src/FaucheurBundle/*'
         # you can exclude directories or files
         # but if a service is unused, it's removed anyway
-        exclude: '../../src/BDDMBundle/{Entity,Repository}'
+        exclude: '../../src/FaucheurBundle/{Entity,Repository}'
 
     # controllers are imported separately to make sure they're public
     # and have a tag that allows actions to type-hint services
-    BDDMBundle\Controller\:
-        resource: '../../src/BDDMBundle/Controller'
+    FaucheurBundle\Controller\:
+        resource: '../../src/FaucheurBundle/Controller'
         public: true
         tags: ['controller.service_arguments']
 

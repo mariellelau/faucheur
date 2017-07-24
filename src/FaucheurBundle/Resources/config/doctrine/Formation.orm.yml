@@ -1,0 +1,53 @@
+FaucheurBundle\Entity\Formation:
+    type: entity
+    table: formations
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: nom_formation
+        type:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: type_formation
+        dateDebut:
+            type: datetime
+            nullable: true
+        duree:
+            type: string
+            nullable: true
+            length: null
+            options:
+                fixed: false
+        lieu:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        notes:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+#    oneToOne:
+#        militant:
+#            targetEntity: FaucheurBundle\Entity\Militant
+#            mappedBy: formation
+#        campagne:
+#            targetEntity: FaucheurBundle\Entity\Campagne
+#            mappedBy: formation
+    lifecycleCallbacks: {  }

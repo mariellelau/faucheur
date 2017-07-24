@@ -1,0 +1,40 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <h1>{{ association.nomAssociation }}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ association.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom de l'association</th>
+                <td>{{ association.nomAssociation }}</td>
+            </tr>
+            <tr>
+                <th>Cod epostal</th>
+                <td>{{ association.codepostal }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ association.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('association_index') }}">Liste des associations</a>
+        </li>
+        <li>
+            <a href="{{ path('association_edit', { 'id': association.id }) }}">Editer</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

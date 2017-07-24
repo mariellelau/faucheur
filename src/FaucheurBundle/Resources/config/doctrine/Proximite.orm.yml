@@ -1,0 +1,26 @@
+FaucheurBundle\Entity\Proximite:
+    type: entity
+    table: proximite
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: nom_proximite
+
+    lifecycleCallbacks: {  }
+#    oneToOne:
+#        mailing:
+#            targetEntity: FaucheurBundle\Entity\Mailing
+#            mappedBy: proximite
+#        militant:
+#            targetEntity: FaucheurBundle\Entity\Militant
+#            mappedBy: proximite

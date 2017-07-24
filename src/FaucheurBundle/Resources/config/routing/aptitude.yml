@@ -1,0 +1,24 @@
+aptitude_index:
+    path:     /
+    defaults: { _controller: "FaucheurBundle:Aptitude:index" }
+    methods:  GET
+
+aptitude_show:
+    path:     /{id}/show
+    defaults: { _controller: "FaucheurBundle:Aptitude:show" }
+    methods:  GET
+
+aptitude_new:
+    path:     /new
+    defaults: { _controller: "FaucheurBundle:Aptitude:new" }
+    methods:  [GET, POST]
+
+aptitude_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FaucheurBundle:Aptitude:edit" }
+    methods:  [GET, POST]
+
+aptitude_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FaucheurBundle:Aptitude:delete" }
+    methods:  DELETE

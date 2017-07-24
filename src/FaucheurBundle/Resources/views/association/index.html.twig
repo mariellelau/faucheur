@@ -1,0 +1,43 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des associations</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom de l'association</th>
+                <th>Code postal</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for association in associations %}
+            <tr>
+                <td><a href="{{ path('association_show', { 'id': association.id }) }}">{{ association.id }}</a></td>
+                <td>{{ association.nomAssociation }}</td>
+                <td>{{ association.codepostal }}</td>
+                <td>{{ association.type }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('association_show', { 'id': association.id }) }}">voir</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('association_edit', { 'id': association.id }) }}">éditer</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('association_new') }}">Ajouter une association</a>
+        </li>
+    </ul>
+{% endblock %}

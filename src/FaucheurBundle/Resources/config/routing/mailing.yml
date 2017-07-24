@@ -1,0 +1,24 @@
+mailing_index:
+    path:     /
+    defaults: { _controller: "FaucheurBundle:Mailing:index" }
+    methods:  GET
+
+mailing_show:
+    path:     /{id}/show
+    defaults: { _controller: "FaucheurBundle:Mailing:show" }
+    methods:  GET
+
+mailing_new:
+    path:     /new
+    defaults: { _controller: "FaucheurBundle:Mailing:new" }
+    methods:  [GET, POST]
+
+mailing_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FaucheurBundle:Mailing:edit" }
+    methods:  [GET, POST]
+
+mailing_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FaucheurBundle:Mailing:delete" }
+    methods:  DELETE

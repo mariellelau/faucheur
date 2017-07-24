@@ -1,0 +1,43 @@
+FaucheurBundle\Entity\Action:
+    type: entity
+    table: action
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: nom_action
+        type:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: type_action
+        dateDebut:
+            type: datetime
+            nullable: true
+        duree:
+            type: string
+            nullable: true
+            length: null
+            options:
+                fixed: false
+        lieu:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+    lifecycleCallbacks: { }
+#    manyToOne:
+#        campagne:
+#            targetEntity: FaucheurBundle\Entity\Campagne

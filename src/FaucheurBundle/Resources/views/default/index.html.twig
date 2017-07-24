@@ -1,0 +1,22 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <div class="row center">
+        <div class="col s12">
+            <h1>Plateforme de mise en relation entre militant.e.s</h1>
+        </div>
+    </div>
+    <div class="row center">
+        <div class="col s12">
+            <h2>Que souhaites-tu faire ?</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4 offset-s2">
+            <a class="waves-effect waves-light btn" href="{{ path('faucheur_rechercher') }}">Je recherche des infos</a>
+        </div>
+        <div class="col s4">
+            <a class="waves-effect waves-light btn" href="{{ path('faucheur_ajouter') }}">Je complète la base</a>
+        </div>
+    </div>
+{% endblock %}

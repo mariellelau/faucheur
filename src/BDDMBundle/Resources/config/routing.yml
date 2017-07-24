@@ -1,6 +1,0 @@
-bddm_homepage:
-    path:     /
-    defaults: { _controller: BDDMBundle:Views:index }
-bddm_search:
-    path:     /rechercher
-    defaults: { _controller: BDDMBundle:Views:search }

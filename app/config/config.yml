@@ -6,7 +6,7 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi: ~
@@ -54,19 +54,13 @@ doctrine:
     orm:
         default_entity_manager: pgsql
         auto_generate_proxy_classes: "%kernel.debug%"
-        #auto_mapping: true
-
         entity_managers:
             pgsql:
                 connection: pgsql    # connection name for your additional DB
 
                 # bundles utilisant la connexion Postgresql
-                mappings: ~
-
-    orm:
-        auto_generate_proxy_classes: '%kernel.debug%'
-        naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
+                mappings:
+                    FaucheurBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
