@@ -10,17 +10,6 @@ FaucheurBundle\Entity\Proximite:
     fields:
         nom:
             type: string
-            nullable: true
-            length: 30
-            options:
-                fixed: false
-            column: nom_proximite
-
+            nullable: false
+            length: 255
     lifecycleCallbacks: {  }
-#    oneToOne:
-#        mailing:
-#            targetEntity: FaucheurBundle\Entity\Mailing
-#            mappedBy: proximite
-#        militant:
-#            targetEntity: FaucheurBundle\Entity\Militant
-#            mappedBy: proximite

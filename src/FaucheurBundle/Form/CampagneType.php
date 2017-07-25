@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CompetenceType extends AbstractType
+class CampagneType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -17,14 +17,14 @@ class CompetenceType extends AbstractType
             ->add('nom')
         ;
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'FaucheurBundle\Entity\Competence'
+            'data_class' => 'FaucheurBundle\Entity\Campagne'
         ));
     }
 
@@ -33,7 +33,7 @@ class CompetenceType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'faucheurbundle_competence';
+        return 'faucheurbundle_campagne';
     }
 
 

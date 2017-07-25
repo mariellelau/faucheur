@@ -508,4 +508,126 @@ class Militant
     {
         return $this->telephone;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $associations;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $aptitude;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $formation;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $role;
+
+
+    /**
+     * Set proximite
+     *
+     * @param \FaucheurBundle\Entity\Proximite $proximite
+     *
+     * @return Militant
+     */
+    public function setProximite(\FaucheurBundle\Entity\Proximite $proximite = null)
+    {
+        $this->proximite = $proximite;
+
+        return $this;
+    }
+
+    /**
+     * Add association
+     *
+     * @param \FaucheurBundle\Entity\Association $association
+     *
+     * @return Militant
+     */
+    public function addAssociation(\FaucheurBundle\Entity\Association $association)
+    {
+        $this->associations[] = $association;
+
+        return $this;
+    }
+
+    /**
+     * Remove association
+     *
+     * @param \FaucheurBundle\Entity\Association $association
+     */
+    public function removeAssociation(\FaucheurBundle\Entity\Association $association)
+    {
+        $this->associations->removeElement($association);
+    }
+
+    /**
+     * Get associations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAssociations()
+    {
+        return $this->associations;
+    }
+
+    /**
+     * Get aptitude
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAptitude()
+    {
+        return $this->aptitude;
+    }
+
+    /**
+     * Get formation
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFormation()
+    {
+        return $this->formation;
+    }
+
+    /**
+     * Add role
+     *
+     * @param \FaucheurBundle\Entity\Role $role
+     *
+     * @return Militant
+     */
+    public function addRole(\FaucheurBundle\Entity\Role $role)
+    {
+        $this->role[] = $role;
+
+        return $this;
+    }
+
+    /**
+     * Remove role
+     *
+     * @param \FaucheurBundle\Entity\Role $role
+     */
+    public function removeRole(\FaucheurBundle\Entity\Role $role)
+    {
+        $this->role->removeElement($role);
+    }
+
+    /**
+     * Get role
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
 }

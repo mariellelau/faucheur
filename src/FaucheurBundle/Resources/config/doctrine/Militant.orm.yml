@@ -4,91 +4,58 @@ FaucheurBundle\Entity\Militant:
     id:
         id:
             type: integer
-            nullable: false
-            options:
-                unsigned: false
             id: true
-            column: id
             generator:
-                strategy: SEQUENCE
+                strategy: AUTO
     fields:
         nom:
             type: string
             nullable: true
             length: 50
-            options:
-                fixed: false
         prenom:
             type: string
             nullable: true
             length: 50
-            options:
-                fixed: false
         email:
             type: string
             nullable: false
-            length: 100
-            options:
-                fixed: false
-            column: email_militant
+            length: 255
         telephone:
             type: string
             nullable: true
-            length: 20
-            options:
-                fixed: false
+            length: 255
         adresse:
             type: string
             nullable: true
-            length: 250
-            options:
-                fixed: false
+            length: 255
         ville:
             type: string
             nullable: true
             length: 100
-            options:
-                fixed: false
         codePostal:
             type: integer
             nullable: true
-            options:
-                unsigned: false
         facebook:
             type: string
             nullable: true
-            length: 20
-            options:
-                fixed: false
+            length: 255
         twitter:
             type: string
             nullable: true
-            length: 20
-            options:
-                fixed: false
+            length: 255
         notes:
-            type: string
+            type: text
             nullable: true
-            length: 250
-            options:
-                fixed: false
     lifecycleCallbacks: {  }
-#    oneToMany:
-#        proximite:
-#            targetEntity: FaucheurBundle\Entity\Proximite
-#            mappedBy: idProximite
-#    manyToMany:
-#        actions:
-#            targetEntity: FaucheurBundle\Entity\Action
-#            joinTable:
-#                name: actions_militants
-#                joinColumns:
-#                    action_id:
-#                        referencedColumnName: id
-#                inverseJoinColumns:
-#                    militant_id:
-#                        referencedColumnName: id
-#        aptitudes:
-#            targetEntity: FaucheurBundle\Entity\Aptitude
-#        formations:
-#            targetEntity: FaucheurBundle\Entity\Formation
+    manyToOne:
+        proximite:
+            targetEntity: FaucheurBundle\Entity\Proximite
+    manyToMany:
+        associations:
+            targetEntity: FaucheurBundle\Entity\Association
+        aptitude:
+            targetEntity: FaucheurBundle\Entity\Aptitude
+        formation:
+            targetEntity: FaucheurBundle\Entity\Formation
+        role:
+            targetEntity: FaucheurBundle\Entity\Role

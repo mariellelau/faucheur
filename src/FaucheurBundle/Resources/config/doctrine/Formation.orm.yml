@@ -1,6 +1,6 @@
 FaucheurBundle\Entity\Formation:
     type: entity
-    table: formations
+    table: formation
     id:
         id:
             type: integer
@@ -10,44 +10,24 @@ FaucheurBundle\Entity\Formation:
     fields:
         nom:
             type: string
-            nullable: true
-            length: 100
-            options:
-                fixed: false
-            column: nom_formation
+            nullable: false
+            length: 255
         type:
             type: string
             nullable: true
-            length: 100
-            options:
-                fixed: false
-            column: type_formation
+            length: 255
         dateDebut:
             type: datetime
             nullable: true
         duree:
             type: string
             nullable: true
-            length: null
-            options:
-                fixed: false
+            length: 255
         lieu:
             type: string
             nullable: true
-            length: 100
-            options:
-                fixed: false
+            length: 255
         notes:
-            type: string
+            type: text
             nullable: true
-            length: 250
-            options:
-                fixed: false
-#    oneToOne:
-#        militant:
-#            targetEntity: FaucheurBundle\Entity\Militant
-#            mappedBy: formation
-#        campagne:
-#            targetEntity: FaucheurBundle\Entity\Campagne
-#            mappedBy: formation
     lifecycleCallbacks: {  }

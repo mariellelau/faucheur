@@ -1,6 +1,6 @@
 FaucheurBundle\Entity\Role:
     type: entity
-    table: role_action
+    table: role
     id:
         id:
             type: integer
@@ -8,15 +8,11 @@ FaucheurBundle\Entity\Role:
             generator:
                 strategy: AUTO
     fields:
-        nomRole:
+        nom:
             type: string
             nullable: true
             length: 150
-            options:
-                fixed: false
-            column: nom_role
-#    oneToOne:
-#        idRole:
-#            targetEntity: Action
-#            mappedBy: id
     lifecycleCallbacks: {  }
+    manyToMany:
+        actions:
+            targetEntity: FaucheurBundle\Entity\Action

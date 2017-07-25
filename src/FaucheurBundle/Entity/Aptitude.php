@@ -110,4 +110,50 @@ class Aptitude
     {
         return $this->competence;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $aptitude;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->aptitude = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add aptitude
+     *
+     * @param \FaucheurBundle\Entity\Aptitude $aptitude
+     *
+     * @return Aptitude
+     */
+    public function addAptitude(\FaucheurBundle\Entity\Aptitude $aptitude)
+    {
+        $this->aptitude[] = $aptitude;
+
+        return $this;
+    }
+
+    /**
+     * Remove aptitude
+     *
+     * @param \FaucheurBundle\Entity\Aptitude $aptitude
+     */
+    public function removeAptitude(\FaucheurBundle\Entity\Aptitude $aptitude)
+    {
+        $this->aptitude->removeElement($aptitude);
+    }
+
+    /**
+     * Get aptitude
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAptitude()
+    {
+        return $this->aptitude;
+    }
 }

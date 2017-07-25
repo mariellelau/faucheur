@@ -16,13 +16,20 @@ class Role
     /**
      * @var string
      */
-    private $nomRole;
+    private $nom;
 
     /**
-     * @var \FaucheurBundle\Entity\Action
+     * @var \Doctrine\Common\Collections\Collection
      */
-    private $idRole;
+    private $actions;
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->actions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -35,50 +42,60 @@ class Role
     }
 
     /**
-     * Set nomRole
+     * Set nom
      *
-     * @param string $nomRole
+     * @param string $nom
      *
-     * @return RoleAction
+     * @return Role
      */
-    public function setNomRole($nomRole)
+    public function setNom($nom)
     {
-        $this->nomRole = $nomRole;
+        $this->nom = $nom;
 
         return $this;
     }
 
     /**
-     * Get nomRole
+     * Get nom
      *
      * @return string
      */
-    public function getNomRole()
+    public function getNom()
     {
-        return $this->nomRole;
+        return $this->nom;
     }
 
     /**
-     * Set idRole
+     * Add action
      *
-     * @param \FaucheurBundle\Entity\Action $idRole
+     * @param \FaucheurBundle\Entity\Action $action
      *
-     * @return RoleAction
+     * @return Role
      */
-    public function setIdRole(\FaucheurBundle\Entity\Action $idRole = null)
+    public function addAction(\FaucheurBundle\Entity\Action $action)
     {
-        $this->idRole = $idRole;
+        $this->actions[] = $action;
 
         return $this;
     }
 
     /**
-     * Get idRole
+     * Remove action
      *
-     * @return \FaucheurBundle\Entity\Action
+     * @param \FaucheurBundle\Entity\Action $action
      */
-    public function getIdRole()
+    public function removeAction(\FaucheurBundle\Entity\Action $action)
     {
-        return $this->idRole;
+        $this->actions->removeElement($action);
+    }
+
+    /**
+     * Get actions
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getActions()
+    {
+        return $this->actions;
     }
 }

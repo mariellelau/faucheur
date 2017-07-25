@@ -10,14 +10,9 @@ FaucheurBundle\Entity\Aptitude:
     fields:
         niveau:
             type: integer
-            nullable: true
-            options:
-                unsigned: false
+            nullable: false
     lifecycleCallbacks: {  }
-#    oneToOne:
-#        militant:
-#            targetEntity: FaucheurBundle\Entity\Militant
-#            mappedBy: aptitude
-#        competence:
-#            targetEntity: FaucheurBundle\Entity\Competence
-#            mappedBy: aptitude
+    oneToMany:
+        aptitude:
+            targetEntity: FaucheurBundle\Entity\Aptitude
+            mappedBy: aptitude

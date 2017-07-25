@@ -13,7 +13,12 @@ class ActionType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nomAction')->add('typeAction')->add('datedeb')->add('duree')->add('lieu')->add('idCampagne')->add('idAction');
+        $builder
+            ->add('nom')
+            ->add('type')
+            ->add('datedebut')
+            ->add('duree')
+            ->add('lieu');
     }
     
     /**

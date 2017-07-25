@@ -19,7 +19,6 @@ class FormationType extends AbstractType
             ->add('dateDebut')
             ->add('duree')
             ->add('lieu')
-            ->add('notes')
         ;
     }
     

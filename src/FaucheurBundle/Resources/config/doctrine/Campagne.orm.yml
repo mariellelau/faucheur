@@ -11,8 +11,5 @@ FaucheurBundle\Entity\Campagne:
         nom:
             type: string
             length: 255
+            nullable: false
     lifecycleCallbacks: {  }
-#    oneToMany:
-#        actions:
-#            targetEntity: FaucheurBundle\Entity\Action
-#            mappedBy: id

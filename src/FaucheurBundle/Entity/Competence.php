@@ -110,4 +110,33 @@ class Competence
     {
         return $this->aptitude;
     }
+    /**
+     * @var \FaucheurBundle\Entity\Competence
+     */
+    private $competenece;
+
+
+    /**
+     * Set competenece
+     *
+     * @param \FaucheurBundle\Entity\Competence $competenece
+     *
+     * @return Competence
+     */
+    public function setCompetenece(\FaucheurBundle\Entity\Competence $competenece = null)
+    {
+        $this->competenece = $competenece;
+
+        return $this;
+    }
+
+    /**
+     * Get competenece
+     *
+     * @return \FaucheurBundle\Entity\Competence
+     */
+    public function getCompetenece()
+    {
+        return $this->competenece;
+    }
 }

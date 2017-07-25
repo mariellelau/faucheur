@@ -22,7 +22,7 @@ class ActionController extends Controller
 
         $actions = $em->getRepository('FaucheurBundle:Action')->findAll();
 
-        return $this->render('action/index.html.twig', array(
+        return $this->render('@Faucheur/action/index.html.twig', array(
             'actions' => $actions,
         ));
     }
@@ -45,7 +45,7 @@ class ActionController extends Controller
             return $this->redirectToRoute('action_show', array('id' => $action->getId()));
         }
 
-        return $this->render('action/new.html.twig', array(
+        return $this->render('@Faucheur/action/new.html.twig', array(
             'action' => $action,
             'form' => $form->createView(),
         ));
@@ -81,7 +81,7 @@ class ActionController extends Controller
             return $this->redirectToRoute('action_edit', array('id' => $action->getId()));
         }
 
-        return $this->render('action/edit.html.twig', array(
+        return $this->render('@Faucheur/action/edit.html.twig', array(
             'action' => $action,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -109,7 +109,7 @@ class ActionController extends Controller
     /**
      * Creates a form to delete a action entity.
      *
-     * @param Actions $action The action entity
+     * @param Action $action The action entity
      *
      * @return \Symfony\Component\Form\Form The form
      */

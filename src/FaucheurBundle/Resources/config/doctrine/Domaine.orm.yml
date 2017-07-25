@@ -1,6 +1,7 @@
-FaucheurBundle\Entity\Mailing:
+FaucheurBundle\Entity\Domaine:
     type: entity
-    table: mailing
+    table: null
+    repositoryClass: FaucheurBundle\Repository\DomaineRepository
     id:
         id:
             type: integer
@@ -11,8 +12,4 @@ FaucheurBundle\Entity\Mailing:
         nom:
             type: string
             length: 255
-            nullable: false
     lifecycleCallbacks: {  }
-    manyToMany:
-        militants:
-            targetEntity: FaucheurBundle\Entity\Militant

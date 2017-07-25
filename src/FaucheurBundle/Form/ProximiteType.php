@@ -13,7 +13,9 @@ class ProximiteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nomProximite')->add('idProximite');
+        $builder
+            ->add('nom')
+        ;
     }
     
     /**

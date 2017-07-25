@@ -19,7 +19,7 @@ class MilitantType extends AbstractType
             ->add('email')
             ->add('telephone')
             ->add('adresse')
-            ->add('codepostal')
+            ->add('codePostal')
             ->add('ville')
             ->add('facebook')
             ->add('twitter')

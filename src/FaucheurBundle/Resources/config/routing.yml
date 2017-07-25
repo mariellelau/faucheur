@@ -20,6 +20,9 @@ faucheur_association:
 faucheur_competence:
     resource: "@FaucheurBundle/Resources/config/routing/competence.yml"
     prefix:   /competence
+faucheur_domaine:
+    resource: "@FaucheurBundle/Resources/config/routing/domaine.yml"
+    prefix:   /domaine
 faucheur_formation:
     resource: "@FaucheurBundle/Resources/config/routing/formation.yml"
     prefix:   /formation
@@ -32,6 +35,6 @@ faucheur_militant:
 faucheur_proximite:
     resource: "@FaucheurBundle/Resources/config/routing/proximite.yml"
     prefix:   /proximite
-
-
-
+faucheur_role:
+    resource: "@FaucheurBundle/Resources/config/routing/role.yml"
+    prefix:   /role

@@ -10,20 +10,13 @@ FaucheurBundle\Entity\Association:
     fields:
         nom:
             type: string
-            nullable: true
-            length: 150
-            options:
-                fixed: false
-            column: nom_association
+            nullable: false
+            length: 255
         codePostal:
             type: integer
             nullable: true
-            options:
-                unsigned: false
         type:
             type: string
             nullable: true
-            length: 150
-            options:
-                fixed: false
+            length: 255
     lifecycleCallbacks: {  }

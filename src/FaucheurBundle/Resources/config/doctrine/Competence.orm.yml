@@ -10,18 +10,14 @@ FaucheurBundle\Entity\Competence:
     fields:
         nom:
             type: string
-            nullable: true
-            length: 150
-            options:
-                fixed: false
+            nullable: false
+            length: 255
         detail:
             type: string
             nullable: true
-            length: 150
-            options:
-                fixed: false
+            length: 255
     lifecycleCallbacks: {  }
-#    oneToOne:
-#        aptitude:
-#            targetEntity: FaucheurBundle\Entity\Aptitude
-#            inversedBy: competence
+    oneToOne:
+        competenece:
+            targetEntity: FaucheurBundle\Entity\Competence
+            inversedBy: competence

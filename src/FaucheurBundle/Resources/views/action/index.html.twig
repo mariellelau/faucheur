@@ -12,7 +12,7 @@
                 <th>Datedeb</th>
                 <th>Duree</th>
                 <th>Lieu</th>
-                <th>Idcampagne</th>
+                <th>Nom de la campagne</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -20,12 +20,12 @@
         {% for action in actions %}
             <tr>
                 <td><a href="{{ path('action_show', { 'id': action.id }) }}">{{ action.id }}</a></td>
-                <td>{{ action.nomAction }}</td>
-                <td>{{ action.typeAction }}</td>
-                <td>{% if action.datedeb %}{{ action.datedeb|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ action.nom }}</td>
+                <td>{{ action.type }}</td>
+                <td>{% if action.datedeb %}{{ action.datedebut|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ action.duree }}</td>
                 <td>{{ action.lieu }}</td>
-                <td>{{ action.idCampagne }}</td>
+                <td>{{ action.campagne.nom }}</td>
                 <td>
                     <ul>
                         <li>
@@ -43,7 +43,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('actions_new') }}">Ajouter une action</a>
+            <a href="{{ path('action_new') }}">Ajouter une action</a>
         </li>
     </ul>
 {% endblock %}

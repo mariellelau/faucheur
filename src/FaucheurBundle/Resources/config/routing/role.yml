@@ -1,0 +1,24 @@
+role_index:
+    path:     /
+    defaults: { _controller: "FaucheurBundle:Role:index" }
+    methods:  GET
+
+role_show:
+    path:     /{id}/show
+    defaults: { _controller: "FaucheurBundle:Role:show" }
+    methods:  GET
+
+role_now:
+    path:     /new
+    defaults: { _controller: "FaucheurBundle:Role:new" }
+    methods:  [GET, POST]
+
+role_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FaucheurBundle:Role:edit" }
+    methods:  [GET, POST]
+
+role_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FaucheurBundle:Role:delete" }
+    methods:  DELETE
