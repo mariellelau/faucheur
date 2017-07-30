@@ -1,0 +1,36 @@
+{% extends '@Faucheur/base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des campagnes</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom de la campagne</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for campagne in campagnes %}
+            <tr>
+                <td><a href="{{ path('campagne_show', { 'id': campagne.id }) }}">{{ campagne.id }}</a></td>
+                <td>{{ campagne.nom }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('campagne_show', { 'id': campagne.id }) }}">voir</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('campagne_edit', { 'id': campagne.id }) }}">éditer</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn waves-effect waves-light" href="{{ path('campagne_new') }}">Ajouter une campagne</a>
+
+{% endblock %}

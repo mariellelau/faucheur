@@ -19,5 +19,5 @@ FaucheurBundle\Entity\Competence:
     lifecycleCallbacks: {  }
     oneToOne:
         competenece:
-            targetEntity: FaucheurBundle\Entity\Competence
-            inversedBy: competence
+            targetEntity: FaucheurBundle\Entity\Domaine
+            inversedBy: domaine

@@ -8,7 +8,6 @@
             <tr>
                 <th>Id</th>
                 <th>Nom de la compétence</th>
-                <th>Detail de la compétence</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -17,7 +16,6 @@
             <tr>
                 <td><a href="{{ path('competence_show', { 'id': competence.id }) }}">{{ competence.id }}</a></td>
                 <td>{{ competence.nom }}</td>
-                <td>{{ competence.detail }}</td>
                 <td>
                     <ul>
                         <li>

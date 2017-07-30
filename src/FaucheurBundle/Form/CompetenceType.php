@@ -15,6 +15,7 @@ class CompetenceType extends AbstractType
     {
         $builder
             ->add('nom')
+            ->add('domaine')
         ;
     }
     

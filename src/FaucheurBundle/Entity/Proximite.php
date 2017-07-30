@@ -8,6 +8,12 @@ namespace FaucheurBundle\Entity;
 class Proximite
 {
 
+    public function __toString()
+    {
+        return $this->nom;
+    }
+
+
     /**
      * @var integer
      */

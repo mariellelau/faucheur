@@ -17,6 +17,9 @@ faucheur_aptitude:
 faucheur_association:
     resource: "@FaucheurBundle/Resources/config/routing/association.yml"
     prefix:   /association
+faucheur_campagne:
+    resource: "@FaucheurBundle/Resources/config/routing/campagne.yml"
+    prefix:   /campagne
 faucheur_competence:
     resource: "@FaucheurBundle/Resources/config/routing/competence.yml"
     prefix:   /competence

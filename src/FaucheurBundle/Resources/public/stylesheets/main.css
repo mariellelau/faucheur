@@ -8,9 +8,8 @@ html, body {
 .container {
     background-color: white;
     width:95%;
-    height:95%;
     margin-left:2%;
-    margin-top:-5%;
+    padding-top:5%;
     margin-bottom:5%;
 }
 .center {
@@ -36,4 +35,13 @@ h2 {
 
 .btn:hover {
     background-color: #690F0F;
+}
+
+
+.input-field {
+    z-index:100;
+}
+
+select {
+    z-index: 100;
 }

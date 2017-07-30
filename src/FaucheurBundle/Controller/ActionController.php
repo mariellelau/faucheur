@@ -48,6 +48,7 @@ class ActionController extends Controller
         return $this->render('@Faucheur/action/new.html.twig', array(
             'action' => $action,
             'form' => $form->createView(),
+
         ));
     }
 
@@ -59,7 +60,7 @@ class ActionController extends Controller
     {
         $deleteForm = $this->createDeleteForm($action);
 
-        return $this->render('action/show.html.twig', array(
+        return $this->render('@Faucheur/action/show.html.twig', array(
             'action' => $action,
             'delete_form' => $deleteForm->createView(),
         ));

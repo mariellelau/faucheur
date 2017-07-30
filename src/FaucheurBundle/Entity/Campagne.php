@@ -7,6 +7,11 @@ namespace FaucheurBundle\Entity;
  */
 class Campagne
 {
+    public function __toString()
+    {
+        return $this->nom;
+    }
+
 
     /**
      * @var integer

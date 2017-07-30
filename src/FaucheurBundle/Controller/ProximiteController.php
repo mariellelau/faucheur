@@ -22,7 +22,7 @@ class ProximiteController extends Controller
 
         $proximites = $em->getRepository('FaucheurBundle:Proximite')->findAll();
 
-        return $this->render('proximite/index.html.twig', array(
+        return $this->render('@Faucheur/proximite/index.html.twig', array(
             'proximites' => $proximites,
         ));
     }
@@ -45,7 +45,7 @@ class ProximiteController extends Controller
             return $this->redirectToRoute('proximite_show', array('id' => $proximite->getId()));
         }
 
-        return $this->render('proximite/new.html.twig', array(
+        return $this->render('@Faucheur/proximite/show.html.twig', array(
             'proximite' => $proximite,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class ProximiteController extends Controller
     {
         $deleteForm = $this->createDeleteForm($proximite);
 
-        return $this->render('proximite/show.html.twig', array(
+        return $this->render('@Faucheur/proximite/show.html.twig', array(
             'proximite' => $proximite,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -81,7 +81,7 @@ class ProximiteController extends Controller
             return $this->redirectToRoute('proximite_edit', array('id' => $proximite->getId()));
         }
 
-        return $this->render('proximite/edit.html.twig', array(
+        return $this->render('@Faucheur/proximite/edit.html.twig', array(
             'proximite' => $proximite,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

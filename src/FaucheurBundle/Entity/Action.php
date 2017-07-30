@@ -197,6 +197,7 @@ class Action
     {
         return $this->campagne;
     }
+
     /**
      * @var \DateTime
      */

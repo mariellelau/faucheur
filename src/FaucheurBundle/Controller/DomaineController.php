@@ -22,7 +22,7 @@ class DomaineController extends Controller
 
         $domaines = $em->getRepository('FaucheurBundle:Domaine')->findAll();
 
-        return $this->render('domaine/index.html.twig', array(
+        return $this->render('@Faucheur/domaine/index.html.twig', array(
             'domaines' => $domaines,
         ));
     }
@@ -45,7 +45,7 @@ class DomaineController extends Controller
             return $this->redirectToRoute('domaine_show', array('id' => $domaine->getId()));
         }
 
-        return $this->render('domaine/new.html.twig', array(
+        return $this->render('@Faucheur/domaine/new.html.twig', array(
             'domaine' => $domaine,
             'form' => $form->createView(),
         ));
@@ -81,7 +81,7 @@ class DomaineController extends Controller
             return $this->redirectToRoute('domaine_edit', array('id' => $domaine->getId()));
         }
 
-        return $this->render('domaine/edit.html.twig', array(
+        return $this->render('@Faucheur/domaine/edit.html.twig', array(
             'domaine' => $domaine,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

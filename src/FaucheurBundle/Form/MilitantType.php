@@ -21,6 +21,7 @@ class MilitantType extends AbstractType
             ->add('adresse')
             ->add('codePostal')
             ->add('ville')
+            ->add('proximite')
             ->add('facebook')
             ->add('twitter')
             ->add('notes');
@@ -41,7 +42,7 @@ class MilitantType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'faucheurbundle_militants';
+        return 'faucheurbundle_militant';
     }
 
 

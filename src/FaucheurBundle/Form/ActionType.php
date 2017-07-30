@@ -2,7 +2,11 @@
 
 namespace FaucheurBundle\Form;
 
+use FaucheurBundle\Entity\Campagne;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,7 +22,12 @@ class ActionType extends AbstractType
             ->add('type')
             ->add('datedebut')
             ->add('duree')
-            ->add('lieu');
+            ->add('lieu')
+            ->add('campagne', EntityType::class, array(
+                'class' => Campagne::class,
+                'choice_label' => 'nom',
+            ))
+        ;
     }
     
     /**

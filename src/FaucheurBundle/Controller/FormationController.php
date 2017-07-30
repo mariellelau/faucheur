@@ -59,7 +59,7 @@ class FormationController extends Controller
     {
         $deleteForm = $this->createDeleteForm($formation);
 
-        return $this->render('formation/show.html.twig', array(
+        return $this->render('@Faucheur/formation/show.html.twig', array(
             'formation' => $formation,
             'delete_form' => $deleteForm->createView(),
         ));

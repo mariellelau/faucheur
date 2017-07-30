@@ -38,7 +38,7 @@ class MilitantController extends Controller
             $em->persist($militant);
             $em->flush();
 
-            return $this->redirectToRoute('militant_show', array('idMilitant' => $militant->getIdmilitant()));
+            return $this->redirectToRoute('militant_show', array('id' => $militant->getId()));
         }
 
         return $this->render('@Faucheur/militant/new.html.twig', array(
@@ -74,7 +74,7 @@ class MilitantController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('militant_edit', array('idMilitant' => $militant->getIdmilitant()));
+            return $this->redirectToRoute('militant_edit', array('id' => $militant->getId()));
         }
 
         return $this->render('@Faucheur/militant/edit.html.twig', array(
@@ -112,7 +112,7 @@ class MilitantController extends Controller
     private function createDeleteForm(Militant $militant)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('militant_delete', array('idMilitant' => $militant->getIdmilitant())))
+            ->setAction($this->generateUrl('militant_delete', array('id' => $militant->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;
