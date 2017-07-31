@@ -1,88 +1,83 @@
 {% extends '@Faucheur/base.html.twig' %}
 
 {% block body %}
-    <h1>Action creation</h1>
+    <h1>Ajouter une action</h1>
 
     {{ form_start(form) }}
-    <div class="row input-field">
-        {{ form_label(form.nom) }}
-        {{ form_widget(form.nom) }}
-        {{ form_errors(form.nom) }}
-    </div>
-
-    <div class="row input-field">
-        {{ form_label(form.type) }}
-        {{ form_widget(form.type) }}
-        {{ form_errors(form.type) }}
-    </div>
-
-    <div class="row input-field">
-        <div class="col s2">
-            {{ form_label(form.datedebut) }}
+        <div class="row input-field">
+            {{ form_label(form.nom) }}
+            {{ form_widget(form.nom) }}
+            {{ form_errors(form.nom) }}
         </div>
-        <div class="col s8 datepicker">
-            {{ form_widget(form.datedebut) }}
-        {{ form_errors(form.datedebut) }}
+
+        <div class="row input-field">
+            {{ form_label(form.type) }}
+            {{ form_widget(form.type) }}
+            {{ form_errors(form.type) }}
         </div>
-    </div>
 
-    <div class="row input-field ">
-        {{ form_label(form.duree) }}
-        {{ form_widget(form.duree) }}
-        {{ form_errors(form.duree) }}
-    </div>
+        <div class="row input-field">
+            <div class="col s2">
+                {{ form_label(form.datedebut) }}
+            </div>
+            <div class="col s8 datepicker">
+                {{ form_widget(form.datedebut) }}
+            {{ form_errors(form.datedebut) }}
+            </div>
+        </div>
 
-    <div class="row input-field">
-        {{ form_label(form.lieu) }}
-        {{ form_widget(form.lieu) }}
-        {{ form_errors(form.lieu) }}
-    </div>
+        <div class="row input-field ">
+            {{ form_label(form.duree) }}
+            {{ form_widget(form.duree) }}
+            {{ form_errors(form.duree) }}
+        </div>
 
-    <div class="row input-field select">
-        {{ form_label(form.campagne) }}
-        {{ form_widget(form.campagne) }}
-        {{ form_errors(form.campagne) }}
-    </div>
+        <div class="row input-field">
+            {{ form_label(form.lieu) }}
+            {{ form_widget(form.lieu) }}
+            {{ form_errors(form.lieu) }}
+        </div>
 
+        <div class="row input-field select">
+            {{ form_label(form.campagne) }}
+            {{ form_widget(form.campagne) }}
+            {{ form_errors(form.campagne) }}
+        </div>
 
-
-
-
-    <input class="btn waves-effect waves-light" type="submit" value="Create" />
+        <input class="btn waves-effect waves-light" type="submit" value="Ajouter l'action" />
     {{ form_end(form) }}
 
     <a class="btn waves-effect waves-light" href="{{ path('action_index') }}">Liste des actions</a>
 
-{% block javascripts %}
-.        {{ parent() }}
-    <script>
-            $(document).ready(function() {
-                $('select').material_select();
-}           );
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+                $(document).ready(function() {
+                    $('select').material_select();
+    }           );
 
-//            $('.datepicker').pickadate({
-//                selectMonths: true, // Creates a dropdown to control month
-//                selectYears: 1, // Creates a dropdown of 15 years to control year,
-//                today: 'Today',
-//                clear: 'Clear',
-//                close: 'Ok',
-//                closeOnSelect: true // Close upon selecting a date,
-//            });
-//
-//            $('.timepicker').pickatime({
-//                default: 'now', // Set default time: 'now', '1:30AM', '16:30'
-//                fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
-//                twelvehour: false, // Use AM/PM or 24-hour format
-//                donetext: 'OK', // text for done-button
-//                cleartext: 'Clear', // text for clear-button
-//                canceltext: 'Cancel', // Text for cancel-button
-//                autoclose: false, // automatic close timepicker
-//                ampmclickable: true, // make AM PM clickable
-//                aftershow: function(){} //Function for after opening timepicker
-//            });
+    //            $('.datepicker').pickadate({
+    //                selectMonths: true, // Creates a dropdown to control month
+    //                selectYears: 1, // Creates a dropdown of 15 years to control year,
+    //                today: 'Today',
+    //                clear: 'Clear',
+    //                close: 'Ok',
+    //                closeOnSelect: true // Close upon selecting a date,
+    //            });
+    //
+    //            $('.timepicker').pickatime({
+    //                default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+    //                fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+    //                twelvehour: false, // Use AM/PM or 24-hour format
+    //                donetext: 'OK', // text for done-button
+    //                cleartext: 'Clear', // text for clear-button
+    //                canceltext: 'Cancel', // Text for cancel-button
+    //                autoclose: false, // automatic close timepicker
+    //                ampmclickable: true, // make AM PM clickable
+    //                aftershow: function(){} //Function for after opening timepicker
+    //            });
 
-    </script>
+        </script>
 
-
-{% endblock javascripts %}
+    {% endblock javascripts %}
 {% endblock %}

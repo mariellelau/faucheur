@@ -31,3 +31,6 @@ FaucheurBundle\Entity\Action:
     manyToOne:
         campagne:
             targetEntity: FaucheurBundle\Entity\Campagne
+    oneToMany:
+        roles:
+            targetEntity: FaucheurBundle\Entity\Role

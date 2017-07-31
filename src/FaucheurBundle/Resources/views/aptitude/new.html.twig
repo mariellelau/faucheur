@@ -10,4 +10,12 @@
 
     <a class="btn waves-effect waves-light" href="{{ path('aptitude_index') }}">Liste des aptitudes</a>
 
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+					$(document).ready(function() {
+						$('select').material_select();
+					}           );
+        </script>
+    {% endblock javascripts %}
 {% endblock %}

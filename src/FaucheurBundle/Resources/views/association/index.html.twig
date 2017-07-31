@@ -6,30 +6,17 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom de l'association</th>
                 <th>Code postal</th>
                 <th>Type</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for association in associations %}
             <tr>
-                <td><a href="{{ path('association_show', { 'id': association.id }) }}">{{ association.id }}</a></td>
-                <td>{{ association.nomAssociation }}</td>
+                <td><a href="{{ path('association_show', { 'id': association.id }) }}">{{ association.nomAssociation }}</a></td>
                 <td>{{ association.codepostal }}</td>
                 <td>{{ association.type }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('association_show', { 'id': association.id }) }}">voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('association_edit', { 'id': association.id }) }}">éditer</a>
-                        </li>
-                    </ul>
-                </td>
             </tr>
         {% endfor %}
         </tbody>

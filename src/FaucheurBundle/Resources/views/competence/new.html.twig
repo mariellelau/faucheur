@@ -5,12 +5,16 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Valider" />
+        <input class="btn waves-light waves-effect" type="submit" value="Valider" />
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('competence_index') }}">Liste des compétences</a>
-        </li>
-    </ul>
+    <a class="btn waves-light waves-effect" href="{{ path('competence_index') }}">Liste des compétences</a>
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+					$(document).ready(function() {
+						$('select').material_select();
+					}           );
+        </script>
+    {% endblock javascripts %}
 {% endblock %}

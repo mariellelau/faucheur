@@ -6,11 +6,7 @@
     <table>
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ formation.id }}</td>
-            </tr>
-            <tr>
-                <th>Nomformation</th>
+                <th>Nom de la formation</th>
                 <td>{{ formation.nom }}</td>
             </tr>
             <tr>
@@ -36,9 +32,9 @@
         </tbody>
     </table>
 
-    <a class="btn waves-effect waves-light" href="{{ path('formation_index') }}">Liste des formations</a>
 
     <a class="fbtn waves-effect waves-light" href="{{ path('formation_edit', { 'id': formation.id }) }}">Modifier</a>
+    <a class="btn waves-effect waves-light" href="{{ path('formation_index') }}">Liste des formations</a>
 
     {{ form_start(delete_form) }}
         <input class="btn waves-effect waves-light" type="submit" value="Supprimer">

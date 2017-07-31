@@ -6,10 +6,6 @@
     <table>
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ association.id }}</td>
-            </tr>
-            <tr>
                 <th>Nom de l'association</th>
                 <td>{{ association.nomAssociation }}</td>
             </tr>
@@ -24,8 +20,8 @@
         </tbody>
     </table>
 
-    <a class="btn waves-effect waves-light" href="{{ path('association_index') }}">Liste des associations</a>
     <a class="btn waves-effect waves-light" href="{{ path('association_edit', { 'id': association.id }) }}">Editer</a>
+    <a class="btn waves-effect waves-light" href="{{ path('association_index') }}">Liste des associations</a>
 
     {{ form_start(delete_form) }}
         <input class="btn waves-effect waves-light" type="submit" value="Supprimer">

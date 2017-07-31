@@ -6,25 +6,13 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Id proximite</th>
-                <th>Actions</th>
+                <th>Nom</th>
             </tr>
         </thead>
         <tbody>
         {% for mailing in mailings %}
             <tr>
-                <td><a href="{{ path('mailing_show', { 'id': mailing.id }) }}">{{ mailing.id }}</a></td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('mailing_show', { 'id': mailing.id }) }}">voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('mailing_edit', { 'id': mailing.id }) }}">modifier</a>
-                        </li>
-                    </ul>
-                </td>
+                <td><a href="{{ path('mailing_show', { 'id': mailing.id }) }}">{{ mailing.nom }}</a></td>
             </tr>
         {% endfor %}
         </tbody>

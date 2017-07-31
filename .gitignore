@@ -1,1 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
+/vendor/*
+.idea
+app/config/parameters.yml
+var/cache/*
+var/bootstrap.php.cache

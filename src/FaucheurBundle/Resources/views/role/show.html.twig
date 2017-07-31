@@ -1,14 +1,10 @@
 {% extends '@Faucheur/base.html.twig' %}
 
 {% block body %}
-    <h1>Role</h1>
+    <h1>Rôle</h1>
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ role.id }}</td>
-            </tr>
             <tr>
                 <th>Nom</th>
                 <td>{{ role.nom }}</td>
@@ -16,11 +12,11 @@
         </tbody>
     </table>
 
-    <a class="btn waves-effect waves-light" href="{{ path('role_index') }}">Back to the list</a>
-    <a class="btn waves-effect waves-light" href="{{ path('role_edit', { 'id': role.id }) }}">Edit</a>
+    <a class="btn waves-effect waves-light" href="{{ path('role_edit', { 'id': role.id }) }}">Modifier</a>
+    <a class="btn waves-effect waves-light" href="{{ path('role_index') }}">Liste des rôles</a>
 
     {{ form_start(delete_form) }}
-        <input class="btn waves-effect waves-light" type="submit" value="Delete">
+        <input class="btn waves-effect waves-light" type="submit" value="Supprimer">
     {{ form_end(delete_form) }}
 
 {% endblock %}

@@ -2,6 +2,11 @@
 
 namespace FaucheurBundle\Form;
 
+use FaucheurBundle\Entity\Aptitude;
+use FaucheurBundle\Entity\Association;
+use FaucheurBundle\Entity\Mailing;
+use FaucheurBundle\Entity\Proximite;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -21,10 +26,36 @@ class MilitantType extends AbstractType
             ->add('adresse')
             ->add('codePostal')
             ->add('ville')
-            ->add('proximite')
             ->add('facebook')
             ->add('twitter')
-            ->add('notes');
+            ->add('notes')
+            ->add('association', EntityType::class, array(
+                'class' => Association::class,
+                'choice_label' => 'nom',
+            ))
+            ->add('association', EntityType::class, array(
+                'class' => Association::class,
+                'choice_label' => 'nom',
+            ))
+            ->add('mailing', EntityType::class, array(
+                'class' => Mailing::class,
+                'choice_label' => 'nom',
+                'multiple' => true
+            ))
+            ->add('mailing', EntityType::class, array(
+                'class' => Mailing::class,
+                'choice_label' => 'nom',
+                'multiple' => true
+            ))
+            ->add('proximite', EntityType::class, array(
+                'class' => Proximite::class,
+                'choice_label' => 'nom',
+            ))
+            ->add('aptitude', EntityType::class, array(
+                'class' => Aptitude::class,
+                'choice_label' => 'nom',
+            ))
+        ;
     }
     
     /**

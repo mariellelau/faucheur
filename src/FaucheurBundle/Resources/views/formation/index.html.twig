@@ -6,38 +6,23 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom de la formation</th>
-                <th>Id militant</th>
                 <th>Type de formation</th>
                 <th>Date de début</th>
                 <th>Durée</th>
                 <th>Lieu</th>
-                <th>Id campagne</th>
                 <th>Notes</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for formation in formations %}
             <tr>
-                <td><a href="{{ path('formation_show', { 'id': formation.id }) }}">{{ formation.id }}</a></td>
-                <td>{{ formation.nom }}</td>
+                <td><a href="{{ path('formation_show', { 'id': formation.id }) }}">{{ formation.nom }}</a></td>
                 <td>{{ formation.type }}</td>
                 <td>{% if formation.dateDebut %}{{ formation.dateDebut|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ formation.duree }}</td>
                 <td>{{ formation.lieu }}</td>
                 <td>{{ formation.notes }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('formation_show', { 'id': formation.id }) }}">voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('formation_edit', { 'id': formation.id }) }}">modifier</a>
-                        </li>
-                    </ul>
-                </td>
             </tr>
         {% endfor %}
         </tbody>

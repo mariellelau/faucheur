@@ -1,13 +1,21 @@
 {% extends '@Faucheur/base.html.twig' %}
 
 {% block body %}
-    <h1>Role creation</h1>
+    <h1>Ajouter un rôle</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input class="btn waves-effect waves-light" type="submit" value="Valider" />
     {{ form_end(form) }}
 
-    <a class="btn waves-effect waves-light" href="{{ path('role_index') }}">Back to the list</a>
+    <a class="btn waves-effect waves-light" href="{{ path('role_index') }}">Liste des rôles</a>
 
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+					$(document).ready(function() {
+						$('select').material_select();
+					}           );
+        </script>
+    {% endblock javascripts %}
 {% endblock %}

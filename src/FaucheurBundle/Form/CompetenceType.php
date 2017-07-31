@@ -2,6 +2,8 @@
 
 namespace FaucheurBundle\Form;
 
+use FaucheurBundle\Entity\Domaine;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -15,7 +17,10 @@ class CompetenceType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('domaine')
+            ->add('domaine', EntityType::class, array(
+                'class' => Domaine::class,
+                'choice_label' => 'nom',
+            ))
         ;
     }
     

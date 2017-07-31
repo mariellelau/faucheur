@@ -1,7 +1,7 @@
 {% extends '@Faucheur/base.html.twig' %}
 
 {% block body %}
-    <h1>Proximite</h1>
+    <h1>Proximité</h1>
 
     <table>
         <tbody>
@@ -12,10 +12,10 @@
         </tbody>
     </table>
 
-    <a class="btn waves-effect waves-light" href="{{ path('proximite_index') }}">Liste des proximités</a>
     <a class="btn waves-effect waves-light" href="{{ path('proximite_edit', { 'id': proximite.id }) }}">Modifier</a>
+    <a class="btn waves-effect waves-light" href="{{ path('proximite_index') }}">Liste des proximités</a>
 
     {{ form_start(delete_form) }}
-        <input class="btn waves-effect waves-light" type="submit" value="Delete">
+        <input class="btn waves-effect waves-light" type="submit" value="Supprimer">
     {{ form_end(delete_form) }}
 {% endblock %}

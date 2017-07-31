@@ -1,11 +1,50 @@
 {% extends '@Faucheur/base.html.twig' %}
 
 {% block body %}
-    <h1>Action edit</h1>
+    <h1>Modifier une action</h1>
 
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Modifier" />
+        <div class="row input-field">
+            {{ form_label(edit_form.nom) }}
+            {{ form_widget(edit_form.nom) }}
+            {{ form_errors(edit_form.nom) }}
+        </div>
+
+        <div class="row input-field">
+            {{ form_label(edit_form.type) }}
+            {{ form_widget(edit_form.type) }}
+            {{ form_errors(edit_form.type) }}
+        </div>
+
+        <div class="row input-field">
+            <div class="col s2">
+                {{ form_label(edit_form.datedebut) }}
+            </div>
+            <div class="col s8 datepicker">
+                {{ form_widget(edit_form.datedebut) }}
+                {{ form_errors(edit_form.datedebut) }}
+            </div>
+        </div>
+
+        <div class="row input-field ">
+            {{ form_label(edit_form.duree) }}
+            {{ form_widget(edit_form.duree) }}
+            {{ form_errors(edit_form.duree) }}
+        </div>
+
+        <div class="row input-field">
+            {{ form_label(edit_form.lieu) }}
+            {{ form_widget(edit_form.lieu) }}
+            {{ form_errors(edit_form.lieu) }}
+        </div>
+
+        <div class="row input-field select">
+            {{ form_label(edit_form.campagne) }}
+            {{ form_widget(edit_form.campagne) }}
+            {{ form_errors(edit_form.campagne) }}
+        </div>
+
+        <input class="btn waves-effect waves-light" type="submit" value="Modifier" />
     {{ form_end(edit_form) }}
 
     <a class="btn waves-effect waves-light" href="{{ path('action_index') }}">Liste des actions</a>
@@ -14,4 +53,12 @@
         <input class="btn waves-effect waves-light" type="submit" value="Supprimer">
     {{ form_end(delete_form) }}
 
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+					$(document).ready(function() {
+						$('select').material_select();
+					}           );
+        </script>
+    {% endblock javascripts %}
 {% endblock %}

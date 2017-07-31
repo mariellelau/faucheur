@@ -6,28 +6,15 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Id compétence</th>
                 <th>Niveau</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for aptitude in aptitudes %}
             <tr>
-                <td><a href="{{ path('aptitude_show', { 'id': aptitude.id }) }}">{{ aptitude.id }}</a></td>
-                <td>{{ aptitude.idCompetence }}</td>
+                <td><a href="{{ path('aptitude_show', { 'id': aptitude.id }) }}">{{ aptitude.idCompetence }}</a></td>
                 <td>{{ aptitude.niveau }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('aptitude_show', { 'id': aptitude.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('aptitude_edit', { 'id': aptitude.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
             </tr>
         {% endfor %}
         </tbody>

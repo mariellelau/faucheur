@@ -6,26 +6,13 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for domaine in domaines %}
             <tr>
-                <td><a href="{{ path('role_show', { 'id': role.id }) }}">{{ role.id }}</a></td>
-                <td>{{ role.nom }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('role_show', { 'id': role.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('role_edit', { 'id': role.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
+                <td><a href="{{ path('role_show', { 'id': role.id }) }}">{{ role.nom }}</a></td>
             </tr>
         {% endfor %}
         </tbody>

@@ -6,10 +6,6 @@
     <table>
         <tbody>
             <tr>
-                <th>Idmilitant</th>
-                <td>{{ militant.idMilitant }}</td>
-            </tr>
-            <tr>
                 <th>Nom</th>
                 <td>{{ militant.nom }}</td>
             </tr>
@@ -19,15 +15,11 @@
             </tr>
             <tr>
                 <th>Emailmilitant</th>
-                <td>{{ militant.emailMilitant }}</td>
+                <td>{{ militant.email }}</td>
             </tr>
             <tr>
                 <th>Tel</th>
-                <td>{{ militant.tel }}</td>
-            </tr>
-            <tr>
-                <th>Idproximite</th>
-                <td>{{ militant.idProximite }}</td>
+                <td>{{ militant.telephone }}</td>
             </tr>
             <tr>
                 <th>Adresse</th>
@@ -38,8 +30,8 @@
                 <td>{{ militant.ville }}</td>
             </tr>
             <tr>
-                <th>Codepostal</th>
-                <td>{{ militant.codepostal }}</td>
+                <th>Code postal</th>
+                <td>{{ militant.codePostal }}</td>
             </tr>
             <tr>
                 <th>Facebook</th>
@@ -56,8 +48,9 @@
         </tbody>
     </table>
 
-    <a class="btn wavs-effect wavs-light" href="{{ path('militant_index') }}">Liste des militants</a>
     <a class="btn waves-effect waves-light" href="{{ path('militant_edit', { 'id': militant.id }) }}">Modifier</a>
+    <a class="btn wavs-effect wavs-light" href="{{ path('militant_index') }}">Liste des militants</a>
+
 
     {{ form_start(delete_form) }}
         <input class="btn waves-effect waves-light" type="submit" value="Supprimer">

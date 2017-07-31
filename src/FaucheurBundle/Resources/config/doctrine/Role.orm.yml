@@ -16,3 +16,5 @@ FaucheurBundle\Entity\Role:
     manyToMany:
         actions:
             targetEntity: FaucheurBundle\Entity\Action
+        militants:
+            targetEntity: FaucheurBundle\Entity\Militants

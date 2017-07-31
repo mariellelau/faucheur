@@ -6,10 +6,6 @@
     <table>
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ competence.id }}</td>
-            </tr>
-            <tr>
                 <th>Nom de la compétence</th>
                 <td>{{ competence.nom }}</td>
             </tr>
@@ -20,17 +16,12 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('competence_index') }}">Liste des compétences</a>
-        </li>
-        <li>
-            <a href="{{ path('competence_edit', { 'id': competence.id }) }}">Modifier</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Supprimer">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <a href="{{ path('competence_edit', { 'id': competence.id }) }}">Modifier</a>
+    <a href="{{ path('competence_index') }}">Liste des compétences</a>
+
+
+    {{ form_start(delete_form) }}
+        <input type="submit" value="Supprimer">
+    {{ form_end(delete_form) }}
+
 {% endblock %}

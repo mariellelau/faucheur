@@ -13,5 +13,12 @@
             <a href="{{ path('militant_index') }}">Liste des militants</a>
         </div>
     </div>
-
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+					$(document).ready(function() {
+						$('select').material_select();
+					}           );
+        </script>
+    {% endblock javascripts %}
 {% endblock %}

@@ -3,6 +3,7 @@
 namespace FaucheurBundle\Form;
 
 use FaucheurBundle\Entity\Campagne;
+use FaucheurBundle\Entity\Role;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -26,6 +27,11 @@ class ActionType extends AbstractType
             ->add('campagne', EntityType::class, array(
                 'class' => Campagne::class,
                 'choice_label' => 'nom',
+            ))
+            ->add('roles', EntityType::class, array(
+                'class' => Role::class,
+                'choice_label' => 'nom',
+                'multiple' => true
             ))
         ;
     }

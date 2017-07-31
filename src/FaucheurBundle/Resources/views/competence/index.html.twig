@@ -6,26 +6,13 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom de la compétence</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for competence in competences %}
             <tr>
-                <td><a href="{{ path('competence_show', { 'id': competence.id }) }}">{{ competence.id }}</a></td>
-                <td>{{ competence.nom }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('competence_show', { 'id': competence.id }) }}">voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('competence_edit', { 'id': competence.id }) }}">modifier</a>
-                        </li>
-                    </ul>
-                </td>
+                <td><a href="{{ path('competence_show', { 'id': competence.id }) }}">{{ competence.nom }}</a></td>
             </tr>
         {% endfor %}
         </tbody>

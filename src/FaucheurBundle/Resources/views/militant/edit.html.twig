@@ -14,4 +14,12 @@
         <input type="submit" value="Supprimer">
     {{ form_end(delete_form) }}
 
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+					$(document).ready(function() {
+						$('select').material_select();
+					}           );
+        </script>
+    {% endblock javascripts %}
 {% endblock %}

@@ -1,41 +1,28 @@
 {% extends '@Faucheur/base.html.twig' %}
 
 {% block body %}
-    <h1>Actions list</h1>
+    <h1>Liste des actions</h1>
 
     <table>
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nomaction</th>
-                <th>Typeaction</th>
-                <th>Datedeb</th>
-                <th>Duree</th>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Date de début</th>
+                <th>Durée</th>
                 <th>Lieu</th>
                 <th>Nom de la campagne</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for action in actions %}
             <tr>
-                <td><a href="{{ path('action_show', { 'id': action.id }) }}">{{ action.id }}</a></td>
-                <td>{{ action.nom }}</td>
+                <td><a href="{{ path('action_show', { 'id': action.id }) }}">{{ action.nom }}</a></td>
                 <td>{{ action.type }}</td>
                 <td>{% if action.datedebut %}{{ action.datedebut|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ action.duree }}</td>
                 <td>{{ action.lieu }}</td>
                 <td>{{ action.campagne }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('action_show', { 'id': action.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('action_edit', { 'id': action.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
             </tr>
         {% endfor %}
         </tbody>
